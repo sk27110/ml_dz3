@@ -7,8 +7,9 @@ import joblib
 
 app = FastAPI()
 
+PATH = 'https://github.com/sk27110/ml_dz3/blob/main/clf.joblib'
 
-model = joblib.load('clf.joblib')
+model = joblib.load('PATH')
 
 class Item(BaseModel):
     name: str
