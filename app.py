@@ -145,7 +145,7 @@ def predict_items(items: List[Item]) -> List[float]:
 
 
 @app.post("/upload")
-def upload(file: UploadFile = File(...)) -> Response:
+def upload(file: UploadFile = File(...)):
     try:
         contents = file.file.read()
         with open(file.filename, 'wb') as f:
